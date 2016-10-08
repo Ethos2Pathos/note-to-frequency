@@ -1,0 +1,16 @@
+{
+  "name": "note-to-frequency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build",
+    "lint": "eslint src *.js",
+    "development": "npm run lint && rollup -c",
+    "build": "npm run lint && rollup -c"
+    },
+  "keywords": [],
+  "author": "Geoffrey Dhuyvetters <geoffrey.dhuyvetters@gmail.com> (http://landlocked.herokuapp.com/)",
+  "license": "MIT"
+}
