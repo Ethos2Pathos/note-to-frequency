@@ -8,7 +8,7 @@
     "prepublish": "npm run build",
     "lint": "eslint src *.js",
     "development": "npm run lint && rollup -c -w",
-    "build": "npm run lint && npm test && rollup -c && "
+    "build": "npm run lint && npm test && rollup -c"
   },
   "keywords": [],
   "author": "Geoffrey Dhuyvetters <geoffrey.dhuyvetters@gmail.com> (http://landlocked.herokuapp.com/)",
