@@ -1,6 +1,6 @@
 {
   "name": "note-to-frequency",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "jest": "^16.0.1",
     "rollup": "^0.36.1",
     "rollup-plugin-babel": "^2.6.1",
-    "rollup-watch": "^2.5.0"
+    "rollup-watch": "^2.5.0",
+    "validate-note": "^1.0.0"
   }
 }

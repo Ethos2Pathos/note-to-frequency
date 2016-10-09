@@ -1,17 +1,10 @@
+import validateNote from 'validate-note';
+
 import getPosition from './lib/getPosition';
-import validateNote from './lib/validateNote';
 
 export default (note, {base, maxOctave} = {base: 440, maxOctave: 8}) => {
 
-  if(note.length > 3 || note.length < 2){
-    throw new Error(`${note} is not a valid note`);
-  }
-
-  const letter = note.charAt(0);
-  const octave = note.charAt(note.length-1);
-  const signature = note.length === 3 ? note.charAt(1) : ``;
-
-  validateNote(letter, octave, signature, maxOctave);
+  const {letter, octave, signature} = validateNote(note, {flatToSharp: true, maxOctave});
 
   const pos = getPosition(letter, octave, signature);
   const basePos = getPosition(`A`, 4);
