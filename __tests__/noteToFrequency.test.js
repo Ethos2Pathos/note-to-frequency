@@ -1,49 +1,5 @@
 const noteToFrequency = require(`../dist/`);
 
-describe(`throws suitable erorrs`, () => {
-
-  it(`throws an error on invalid note`, () => {
-
-    expect(() => {
-      noteToFrequency(`A`);
-    }).toThrowError(`A is not a valid note`);
-
-  });
-
-  it(`throws an error on wrong note letter`, () => {
-
-    expect(() => {
-      noteToFrequency(`Q4`);
-    }).toThrowError(`note Q does not exist`);
-
-  });
-
-  it(`throws an error on wrong signature`, () => {
-
-    expect(() => {
-      noteToFrequency(`At4`);
-    }).toThrowError(`t is not a valid signature (#, b)`);
-
-  });
-
-  it(`throws an error on incorrect octave`, () => {
-
-    expect(() => {
-      noteToFrequency(`A9`);
-    }).toThrowError(`octave 9 is too high (0 - 8)`);
-
-  });
-
-  it(`throws an error on incorrect note`, () => {
-
-    expect(() => {
-      noteToFrequency(`E#4`);
-    }).toThrowError(`E#4 does not exist`);
-
-  });
-
-});
-
 describe(`calculate correct frequencies`, () => {
 
   it(`returns 440 as frequency of A4`, () => {
