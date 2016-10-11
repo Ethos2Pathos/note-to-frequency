@@ -2,9 +2,9 @@ import validateNote from 'validate-note';
 
 import getPosition from './lib/getPosition';
 
-export default (note, {base, maxOctave} = {base: 440, maxOctave: 8}) => {
+export default (note, {base = 440, maxOctave = 8, flatToSharp = true} = {}) => {
 
-  const {letter, octave, signature} = validateNote(note, {flatToSharp: true, maxOctave});
+  const {letter, octave, signature} = validateNote(note, {flatToSharp, maxOctave});
 
   const pos = getPosition(letter, octave, signature);
   const basePos = getPosition(`A`, 4);
