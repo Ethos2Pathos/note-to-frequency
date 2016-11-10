@@ -7,5 +7,5 @@ export default [
   `G`, `G#`,
   `A`, `A#`,
   `B`
-  
+
 ];

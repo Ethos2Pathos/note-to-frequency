@@ -1,2 +1,4 @@
-/dist
+cjs
+dist
+es
 .DS_Store

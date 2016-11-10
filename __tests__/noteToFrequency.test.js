@@ -1,4 +1,4 @@
-const noteToFrequency = require(`../dist/`);
+const noteToFrequency = require(`../cjs/`);
 
 describe(`calculate correct frequencies`, () => {
 
