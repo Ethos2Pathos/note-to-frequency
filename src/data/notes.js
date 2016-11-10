@@ -6,6 +6,6 @@ export default [
   `F`, `F#`,
   `G`, `G#`,
   `A`, `A#`,
-  `B`
+  `B`,,
 
 ];

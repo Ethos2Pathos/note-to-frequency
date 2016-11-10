@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest --coverage",
     "prepublish": "npm run lint && npm test && npm run build",
-    "lint": "eslint src *.js",
+    "lint": "eslint src/*.js",
     "clean": "rimraf es cjs dist",
     "development": "npm run lint && rollup -c -w",
     "build": "npm run clean && npm run build:es && npm run build:cjs && npm run build:umd && npm run build:umd:min",
