@@ -80,10 +80,8 @@ var index = (function (note) {
   var base = _ref$base === undefined ? 440 : _ref$base;
   var _ref$maxOctave = _ref.maxOctave;
   var maxOctave = _ref$maxOctave === undefined ? 8 : _ref$maxOctave;
-  var _ref$flatToSharp = _ref.flatToSharp;
-  var flatToSharp = _ref$flatToSharp === undefined ? true : _ref$flatToSharp;
 
-  var _validateNote = validateNote(note, { flatToSharp: flatToSharp, maxOctave: maxOctave });
+  var _validateNote = validateNote(note, { flatToSharp: true, maxOctave: maxOctave });
 
   var letter = _validateNote.letter;
   var octave = _validateNote.octave;
