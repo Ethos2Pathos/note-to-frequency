@@ -1,6 +1,9 @@
-const noteToFrequency = require(`../dist/index.js`);
+const noteToFrequency = require(`../`);
 
-let song = [`G`, `A`, `B`, `G`, `G`, `A`, `B`, `G`];
-song = song.map(n => `${n}4`);
-song = song.map(n => noteToFrequency(n));
+const song = [
+  `G`, `A`, `B`,
+  `G`, `G`, `A`,
+  `B`, `G`
+].map(n => noteToFrequency(`${n}4`));
+
 console.log(song);
