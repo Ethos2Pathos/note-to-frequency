@@ -1,6 +1,6 @@
 # note-to-frequency
 
-🎶 Converts a note (scientific pitch notation) to a frequency
+🎼 Converts a note (scientific pitch notation) to a frequency
 
 [![NPM](https://img.shields.io/npm/v/note-to-frequency.svg?style=flat-square)](https://www.npmjs.com/package/note-to-frequency)
 [![David](https://img.shields.io/david/duivvv/note-to-frequency.svg?style=flat-square)](https://david-dm.org/duivvv/note-to-frequency)
@@ -24,6 +24,8 @@ If you don't use a package manager, you can [access `note-to-frequency` via unpk
 
 The `note-to-frequency` package includes precompiled production and development [UMD](https://github.com/umdjs/umd) builds in the [`dist` folder](https://unpkg.com/note-to-frequency/dist/). They can be used directly without a bundler and are thus compatible with many popular JavaScript module loaders and environments. You can drop a UMD build as a [`<script>` tag](https://unpkg.com/note-to-frequency) on your page. The UMD builds make `note-to-frequency` available as a `window.noteToFrequency` global variable.
 
+This module was created using [generator-module-boilerplate](https://github.com/duivvv/generator-module-boilerplate).
+
 ### Usage
 
 ```js
@@ -37,11 +39,14 @@ console.log(frequency); // > 440
 
 ### Configuration
 
-You can pass an extra options object with these properties
+You can pass in extra options (➕ required, ➖ optional, ✏️ default)
 
+➖ **base** ( Number ) ` ✏️ 440 `
+<br/> 📝 base frequency
 
-- `base`: base frequency <br /> *(default: 440)*
-- `maxOctave`: max octave allowed <br /> *(default: 8)*
+➖ **maxOctave** ( Number ) ` ✏️ 8 `
+<br/> 📝 max octave allowed
+
 
 ```js
 
