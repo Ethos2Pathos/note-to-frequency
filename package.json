@@ -1,6 +1,6 @@
 {
   "name": "note-to-frequency",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "🎼 converts a note (scientific pitch notation) to a frequency",
   "main": "cjs/index.js",
   "browser": "dist/noteToFrequency.js",
