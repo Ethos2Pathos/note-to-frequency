@@ -9,13 +9,13 @@
 
 ### Installation
 
-Install via yarn or npm
+Install via [yarn](https://github.com/yarnpkg/yarn)
 
-	yarn add note-to-frequency -D
+	yarn add note-to-frequency (--dev)
 
-or
+or npm
 
-	npm i note-to-frequency -D
+	npm install note-to-frequency (--dev)
 
 
 If you don't use a package manager, you can [access `note-to-frequency` via unpkg (CDN)](https://unpkg.com/note-to-frequency/), download the source, or point your package manager to the url.
@@ -28,6 +28,8 @@ This module was created using [generator-module-boilerplate](https://github.com/
 
 ### Usage
 
+### basic
+
 ```js
 
 import noteToFrequency from 'note-to-frequency';
@@ -37,16 +39,9 @@ console.log(frequency); // > 440
 
 ```
 
-### Configuration
+### configuration
 
 You can pass in extra options (➕ required, ➖ optional, ✏️ default)
-
-➖ **base** ( Number ) ` ✏️ 440 `
-<br/> 📝 base frequency
-
-➖ **maxOctave** ( Number ) ` ✏️ 8 `
-<br/> 📝 max octave allowed
-
 
 ```js
 
@@ -57,10 +52,17 @@ console.log(note); // > 66.3
 
 ```
 
+➖ **base** ( Number ) ` ✏️ 440 `
+<br/> 📝 base frequency
+
+➖ **maxOctave** ( Number ) ` ✏️ 8 `
+<br/> 📝 max octave allowed
+
+
 ### Examples
 
 see [`example`](example/script.js) folder or the [runkit](https://runkit.com/duivvv/note-to-frequency) example
 
 ### License
 
-MIT
+[MIT](LICENSE)
