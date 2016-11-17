@@ -15,7 +15,7 @@ Install via [yarn](https://github.com/yarnpkg/yarn)
 
 or npm
 
-	npm install note-to-frequency (--dev)
+	npm install note-to-frequency (--save-dev)
 
 
 If you don't use a package manager, you can [access `note-to-frequency` via unpkg (CDN)](https://unpkg.com/note-to-frequency/), download the source, or point your package manager to the url.
