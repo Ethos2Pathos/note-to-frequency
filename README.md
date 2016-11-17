@@ -41,13 +41,13 @@ console.log(frequency); // > 440
 
 ### configuration
 
-You can pass in extra options (➕ required, ➖ optional, ✏️ default)
+You can pass in extra options as a configuration object (➕ required, ➖ optional, ✏️ default)
 
 ```js
 
 import noteToFrequency from 'note-to-frequency';
 
-const frequency = noteToFrequency('C2', {base: 446});
+const frequency = noteToFrequency('C2', {base: 446, maxOctave: 4});
 console.log(note); // > 66.3
 
 ```
