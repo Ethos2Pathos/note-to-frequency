@@ -5,6 +5,4 @@ node_js:
   - "6"
   - "7"
 script:
-  - npm run prepublish
-after_success:
-  - npm run coverage
+  - npm run lint:build:test
