@@ -1,16 +1,23 @@
+// @flow
+
 import validateNote from 'validate-note';
 
 import getPosition from './lib/getPosition';
 
-export default (note, {base = 440, maxOctave = 8} = {}) => {
+type options = {
+  base: number,
+  maxOctave: number
+};
+
+export default (note: string, {base = 440, maxOctave = 8}: options = {}) => {
 
   const {letter, octave, signature} = validateNote(note, {flatToSharp: true, maxOctave});
 
-  const pos = getPosition(letter, octave, signature);
-  const basePos = getPosition(`A`, 4);
-  const diff = pos - basePos;
+  const pos: number = getPosition(letter, octave, signature);
+  const basePos: number = getPosition(`A`, 4);
+  const diff: number = pos - basePos;
 
-  const a = 2 ** (1 / 12);
+  const a: number = 2 ** (1 / 12);
   return Math.round((base * (a ** diff)) * 100) / 100;
 
 };

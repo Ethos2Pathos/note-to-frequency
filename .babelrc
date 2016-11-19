@@ -1,18 +1,27 @@
 {
-  "plugins": ["transform-exponentiation-operator"],
+
+  "plugins": [
+    ["transform-exponentiation-operator"],
+    ["transform-flow-strip-types"]
+  ],
+
   "env": {
+
     "cjs": {
       "presets": [
         ["es2015", {"loose": true}]
       ],
       "plugins": [
-        "add-module-exports"
+        ["add-module-exports"]
       ]
     },
+
     "es": {
       "presets": [
         ["es2015", {"loose": true, "modules": false}]
       ]
     }
+
   }
+
 }
