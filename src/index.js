@@ -9,7 +9,7 @@ type options = {
   maxOctave: number
 };
 
-export default (note: string, {base = 440, maxOctave = 8}: options = {}) => {
+export default (note: string, {base = 440, maxOctave = 8}: options = {}): number => {
 
   const {letter, octave, signature} = validateNote(note, {flatToSharp: true, maxOctave});
 
