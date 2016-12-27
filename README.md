@@ -6,6 +6,7 @@
 [![David](https://img.shields.io/david/duivvv/note-to-frequency.svg?style=flat-square)](https://david-dm.org/duivvv/note-to-frequency)
 [![Travis](https://img.shields.io/travis/duivvv/note-to-frequency/master.svg?style=flat-square)](https://travis-ci.org/duivvv/note-to-frequency)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
+[![Coverage Status](https://img.shields.io/coveralls/duivvv/note-to-frequency.svg?style=flat-square)](https://coveralls.io/github/duivvv/note-to-frequency)
 
 ### Usage
 
