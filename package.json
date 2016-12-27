@@ -12,37 +12,20 @@
     "es",
     "src"
   ],
-  "watch": {
-    "lint": {
-      "patterns": [
-        "src",
-        "__tests__"
-      ],
-      "extensions": "js",
-      "quiet": true
-    }
-  },
-  "pre-commit": [
-    "lint:build:test"
-  ],
-  "pre-push": [
-    "lint:build:test"
-  ],
   "scripts": {
-    "pre-commit": "npm run lint:build:test",
-    "pre-push": "npm run lint:build:test",
+    "precommit": "npm run lint:test",
+    "prepush": "npm run lint:test",
     "prepublish": "npm run build",
     "release": "release-it",
     "lint": "npm run lint:eslint && npm run lint:flow",
     "lint:eslint": "eslint src/*.js",
     "lint:flow": "flow --color always",
-    "lint:watch": "clear && npm-watch",
-    "lint:build": "npm run lint && npm run build:cjs -s",
-    "lint:build:test": "npm run lint:build && npm run test:coverage",
-    "test": "clear && cross-env BABEL_ENV=cjs jest",
-    "test:watch": "clear && cross-env BABEL_ENV=cjs jest --watch",
-    "test:coverage": "cross-env BABEL_ENV=cjs jest --coverage ",
-    "build": "clear && npm run lint:build:test && npm run build:es && npm run build:umd",
+    "test": "clear && jest",
+    "test:watch": "clear && jest --watch",
+    "test:coverage": "jest --coverage ",
+    "lint:test": "npm run lint && npm run test:coverage",
+    "build": "clear && npm run lint:test && npm run build:cjs && npm run build:es && npm run build:umd",
+    "build:watch": "rimraf cjs && cross-env BABEL_ENV=cjs babel -w src --out-dir cjs",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src --out-dir es",
     "build:cjs": "rimraf cjs && cross-env BABEL_ENV=cjs babel src --out-dir cjs",
     "build:umd": "rimraf dist && cross-env BABEL_ENV=es rollup -c & cross-env BABEL_ENV=es NODE_ENV=production rollup -c"
@@ -72,8 +55,8 @@
     "eslint-config-devine": "^1.5.0",
     "eslint-plugin-babel": "^4.0.0",
     "flow-bin": "^0.36.0",
+    "husky": "^0.12.0",
     "jest": "^17.0.0",
-    "npm-watch": "^0.1.6",
     "pre-commit": "^1.1.3",
     "pre-push": "^0.1.1",
     "release-it": "^2.5.1",
