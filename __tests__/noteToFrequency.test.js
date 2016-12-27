@@ -1,4 +1,4 @@
-const noteToFrequency = require(`../`);
+const noteToFrequency = require(`../src/`);
 
 describe(`calculate correct frequencies`, () => {
 

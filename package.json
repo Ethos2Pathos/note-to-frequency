@@ -13,7 +13,7 @@
     "src"
   ],
   "watch": {
-    "lint:build": {
+    "lint": {
       "patterns": [
         "src",
         "__tests__"
@@ -36,13 +36,13 @@
     "lint": "npm run lint:eslint && npm run lint:flow",
     "lint:eslint": "eslint src/*.js",
     "lint:flow": "flow --color always",
+    "lint:watch": "clear && npm-watch",
     "lint:build": "npm run lint && npm run build:cjs -s",
     "lint:build:test": "npm run lint:build && npm run test:coverage",
-    "test": "clear && jest",
-    "test:watch": "clear && jest --watch",
-    "test:coverage": "jest --coverage ",
+    "test": "clear && cross-env BABEL_ENV=cjs jest",
+    "test:watch": "clear && cross-env BABEL_ENV=cjs jest --watch",
+    "test:coverage": "cross-env BABEL_ENV=cjs jest --coverage ",
     "build": "clear && npm run lint:build:test && npm run build:es && npm run build:umd",
-    "build:watch": "clear && npm-watch",
     "build:es": "rimraf es && cross-env BABEL_ENV=es babel src --out-dir es",
     "build:cjs": "rimraf cjs && cross-env BABEL_ENV=cjs babel src --out-dir cjs",
     "build:umd": "rimraf dist && cross-env BABEL_ENV=es rollup -c & cross-env BABEL_ENV=es NODE_ENV=production rollup -c"
@@ -62,6 +62,7 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.17.0",
+    "babel-jest": "^17.0.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-exponentiation-operator": "^6.8.0",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
