@@ -6,6 +6,9 @@
   "browser": "dist/noteToFrequency.js",
   "module": "es/index.js",
   "jsxnext:main": "es/index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "files": [
     "dist",
     "cjs",
