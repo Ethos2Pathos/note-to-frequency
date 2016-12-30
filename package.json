@@ -71,6 +71,6 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "validate-note": "^1.2.0"
+    "validate-note": "^1.3.1"
   }
 }
