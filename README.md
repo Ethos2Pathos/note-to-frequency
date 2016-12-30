@@ -1,12 +1,13 @@
 # note-to-frequency
 
-🎼 Converts a note (scientific pitch notation) to a frequency
-
+![Node](https://img.shields.io/node/v/note-to-frequency.svg?style=flat-square)
 [![NPM](https://img.shields.io/npm/v/note-to-frequency.svg?style=flat-square)](https://www.npmjs.com/package/note-to-frequency)
-[![David](https://img.shields.io/david/duivvv/note-to-frequency.svg?style=flat-square)](https://david-dm.org/duivvv/note-to-frequency)
 [![Travis](https://img.shields.io/travis/duivvv/note-to-frequency/master.svg?style=flat-square)](https://travis-ci.org/duivvv/note-to-frequency)
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
+[![David](https://img.shields.io/david/duivvv/note-to-frequency.svg?style=flat-square)](https://david-dm.org/duivvv/note-to-frequency)
 [![Coverage Status](https://img.shields.io/coveralls/duivvv/note-to-frequency.svg?style=flat-square)](https://coveralls.io/github/duivvv/note-to-frequency)
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
+
+> 🎼 Converts a note (scientific pitch notation) to a frequency
 
 ### Usage
 
@@ -53,7 +54,7 @@ console.log(note); // > 66.3
 
 see [`example`](example/script.js) folder or the [runkit](https://runkit.com/duivvv/note-to-frequency) example
 
-### Different builds
+### Builds
 
 If you don't use a package manager, you can [access `note-to-frequency` via unpkg (CDN)](https://unpkg.com/note-to-frequency/), download the source, or point your package manager to the url.
 
