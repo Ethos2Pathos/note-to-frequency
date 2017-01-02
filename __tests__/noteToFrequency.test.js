@@ -46,7 +46,7 @@ describe(`throws errors`, () => {
   it(`throws error on wrong no octave`, () => {
 
     expect(() => noteToFrequency(`C`))
-      .toThrow(`C is not a valid note, needs an octave`);
+      .toThrow(`'C' is not a valid note`);
 
   });
 
