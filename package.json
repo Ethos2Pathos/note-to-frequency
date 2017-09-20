@@ -59,7 +59,7 @@
     "eslint": "^4.4.1",
     "eslint-config-devine": "^1.7.1",
     "eslint-plugin-babel": "^4.1.2",
-    "flow-bin": "^0.53.0",
+    "flow-bin": "^0.55.0",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
     "release-it": "^2.8.5",
